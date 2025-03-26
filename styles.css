@@ -1,0 +1,146 @@
+/* Estilos para la navbar */
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.8); /* Transparente con opacidad */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    width: 90%; /* Más pequeña horizontalmente */
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 0px 0px 20px 20px;
+    
+}
+.custom-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa izquierda y derecha */
+}
+
+.custom-navbar .nav {
+    margin-left: 15px; /* Ajusta la distancia entre el logo y los links */
+}
+
+.logo {
+    width: 85px; /* Ajusta este valor según el tamaño que desees */
+    height: auto; /* Mantiene la proporción */
+    filter: invert(33%) sepia(61%) saturate(445%) hue-rotate(95deg) brightness(90%) contrast(95%);
+}
+/*Logo 2 pequeño*/
+@media (max-width: 768px) {
+    .logo {
+        width: 45px; /* Reduce el tamaño del logo en pantallas pequeñas */
+    }
+}
+/* Dropdown sin bordes */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el input de búsqueda */
+.custom-navbar input[type="search"] {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+}
+
+/* Botón de búsqueda pequeño */
+.search-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Hace el botón circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 0;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin-right: 10px; /* Separa del icono de perfil */
+}
+
+.cart-icon {
+    width: 30px; /* Ajusta el tamaño del icono */
+    height: auto;
+    filter: none; /* Asegura que no haya efectos de color */
+    background: transparent; /* Elimina cualquier fondo */
+    margin-right: 20px;
+}
+
+.carousel-inner img {
+    object-fit: hover; /* Muestra toda la imagen sin recortarla */
+    height: 80vh;
+    width: 100; /* Se asegura de que ocupe el ancho completo */
+}
+
+
+
+
+
+/* Contenedor Tarjetas */
+.container-productos {
+    max-width: 80%;  /* Ajusta el ancho para que no ocupe toda la pantalla */
+    margin: auto;  /* Centra el contenedor */
+    position: absolute; /* Cambiar de relative a absolute para superponer */
+    top: 65vh; /* Ajusta la posición sobre el carrusel */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Asegura que esté sobre el carrusel */
+    background: white; /* Agrega fondo blanco para que se note la superposición */
+    padding: 20px; /* Espaciado interno para que no esté pegado a los bordes */
+    border-radius: 10px; /* Bordes redondeados para que se vea más elegante */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sutil sombra para dar profundidad */
+}
+
+.carousel {
+    position: relative;
+    z-index: 5; /* Asegura que quede detrás de las tarjetas */
+}
+
+/* Subir los indicadores del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 90px; /* Ajusta este valor para subir los indicadores */
+    z-index: 50; /* Asegura que estén por encima de las tarjetas */
+}
+
+/*--Cards--*/
+
+.card {
+    border: none;              /* Sin borde */
+    border-radius: 10px;       /* Bordes redondeados suaves */
+    box-shadow: none;          /* Sin sombra (o una sombra muy leve) */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); // Sombra sutil opcional */
+    overflow: hidden;          /* Para que el contenido respete el borde redondeado */
+}
+
+.card-img-top {
+    border-radius: 10px;  /* Ajusta el mismo valor que la tarjeta o más grande si quieres más curva */
+    width: 100%;          /* Que ocupe todo el ancho de la card */
+    height: auto;         /* Mantiene la proporción */
+    object-fit: cover;    /* Recorta la imagen para llenarla */
+}
+
+.btn-add-cart {
+    background-color: #fff;      /* Fondo blanco */
+    color: #000;                 /* Texto negro */
+    border: 1px solid #ccc;      /* Borde sutil */
+    border-radius: 30px;         /* Redondo estilo 'pill' */
+    padding: 8px 16px;           /* Espaciado interno */
+    font-weight: 500;            /* Un poco de grosor */
+    cursor: pointer;             /* Indica que es clickeable */
+    transition: all 0.3s ease;   /* Transición suave al hover */
+}
+.btn-add-cart:hover {
+    background-color: black;  /* Cambia el fondo a negro */
+    color: white;  /* Cambia el texto a blanco */
+}
+.card-body {
+    text-align: left; /* Alinea el texto a la izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Asegura que el contenido (título, texto y botón) quede alineado a la izquierda */
+}
